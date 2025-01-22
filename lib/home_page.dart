@@ -3,11 +3,13 @@ import 'package:enhanzer_practicle/models/api_response.dart'; // Adjust the impo
 import 'package:enhanzer_practicle/database/db_manager.dart'; // Adjust the import for your DbManager
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
-  _HomePageState createState() => _HomePageState();
+  HomePageState createState() => HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class HomePageState extends State<HomePage> {
   bool isLoading = true;
   List<ResponseBody> responseData = [];
 

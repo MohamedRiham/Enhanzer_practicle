@@ -51,21 +51,11 @@ class ResponseBody {
 
   Map<String, dynamic> toMap() {
     return {
-      'userCode': userCode,
-      'userDisplayName': userDisplayName,
-      'email': email,
-      'userEmployeeCode': userEmployeeCode,
-      'companyCode': companyCode,
+      'User_Code': userCode,
+      'User_Display_Name': userDisplayName,
+      'Email': email,
+      'User_Employee_Code': userEmployeeCode,
+      'Company_Code': companyCode,
     };
-  }
-
-  factory ResponseBody.fromMap(Map<String, dynamic> map) {
-    return ResponseBody(
-      userCode: map['userCode'],
-      userDisplayName: map['userDisplayName'],
-      email: map['email'],
-      userEmployeeCode: map['userEmployeeCode'],
-      companyCode: map['companyCode'],
-    );
   }
 }

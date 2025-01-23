@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:enhanzer_practicle/models/api_response.dart'; // Adjust the import as needed
-import 'package:enhanzer_practicle/database/db_manager.dart'; // Adjust the import for your DbManager
+import 'package:enhanzer_practicle/models/api_response.dart';
+import 'package:enhanzer_practicle/database/db_manager.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

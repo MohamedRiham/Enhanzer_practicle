@@ -17,12 +17,13 @@ class ApiService {
             },
             body: jsonEncode(body),
           )
-          .timeout(const Duration(seconds: 10)); // Add a timeout
+          .timeout(const Duration(seconds: 10));
 
       // Categorize response status codes
       if (response.statusCode >= 200 && response.statusCode < 300) {
         // Success
         return jsonDecode(response.body);
+
       } else if (response.statusCode >= 400 && response.statusCode < 500) {
         // Client-side errors
         throw Exception(

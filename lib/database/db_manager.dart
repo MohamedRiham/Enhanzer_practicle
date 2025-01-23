@@ -28,11 +28,11 @@ class DbManager {
         await db.execute('''
           CREATE TABLE ApiResponseData(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            userCode TEXT,
-            userDisplayName TEXT,
-            email TEXT,
-            userEmployeeCode TEXT,
-            companyCode TEXT
+            User_Code TEXT,
+            User_Display_Name TEXT,
+            Email TEXT,
+            User_Employee_Code TEXT,
+            Company_Code TEXT
           )
         ''');
       },
@@ -55,7 +55,7 @@ class DbManager {
     final List<Map<String, dynamic>> maps = await db.query('ApiResponseData');
 
     return List.generate(maps.length, (i) {
-      return ResponseBody.fromMap(maps[i]);
+      return ResponseBody.fromJson(maps[i]);
     });
   }
 }

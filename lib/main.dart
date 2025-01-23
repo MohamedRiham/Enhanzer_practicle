@@ -81,9 +81,7 @@ class _LoginPageState extends State<LoginPage> {
         url: 'https://api.ezuite.com/api/External_Api/Mobile_Api/Invoke',
         body: apiRequest.toJson(),
       );
-
-      final apiResponse = ApiResponse.fromJson(response);
-
+      ApiResponse apiResponse = ApiResponse.fromJson(response);
       if (apiResponse.statusCode > 300 &&
           apiResponse.message != null &&
           (apiResponse.responseBody?.isEmpty ?? true)) {
@@ -104,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
       if (mounted) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => HomePage()),
+          MaterialPageRoute(builder: (context) => const HomePage()),
         );
       }
     } catch (e) {
